@@ -1,3 +1,9 @@
+
+import java.util.List;
+
+
 public interface VendingMachine {
-    HotDrinks getProduct(String name, int volume, int temperature);
+    List<HotDrinkWithTemperature> getProductsByName(String name);
+
+    List<HotDrinkWithTemperature> getAllProducts();
 }

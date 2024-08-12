@@ -1,6 +1,7 @@
 import java.util.ArrayList;
 import java.util.List;
 
+
 public class VendingMachineHotDrinks implements VendingMachine {
     private List<HotDrinkWithTemperature> drinks;
 
@@ -13,12 +14,17 @@ public class VendingMachineHotDrinks implements VendingMachine {
     }
 
     @Override
-    public HotDrinks getProduct(String name, int volume, int temperature) {
+    public List<HotDrinkWithTemperature> getProductsByName(String name) {
+        List<HotDrinkWithTemperature> result = new ArrayList<>();
         for (HotDrinkWithTemperature drink : drinks) {
-            if (drink.getName().equals(name) && drink.getVolume() == volume && drink.getTemperature() == temperature) {
-                return drink;
+            if (drink.getName().equalsIgnoreCase(name)) {
+                result.add(drink);
             }
         }
-        return null; // если не найден соответствующий продукт
+        return result;
+    }
+    @Override
+    public List<HotDrinkWithTemperature> getAllProducts() {
+        return new ArrayList<>(drinks);
     }
 }

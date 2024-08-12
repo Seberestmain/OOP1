@@ -12,6 +12,6 @@ public class HotDrinkWithTemperature extends HotDrinks {
 
     @Override
     public String toString() {
-        return "Горячие напитки с температурой" + ", Название: " + getName() + '\'' + ", ОБъём= " + getVolume() + ", Температура=" + temperature ;
+        return "Горячий напиток с температурой (" + "название='" + getName() + '\'' + ", объём=" + getVolume() + ", температура=" + temperature + ')';
     }
 }
