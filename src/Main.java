@@ -13,7 +13,7 @@ public class Main {
         HotDrinks selectedDrink = vendingMachine.getProduct("Чай", 250, 75);
 
         if (selectedDrink != null) {
-            System.out.println("Выбран" + selectedDrink);
+            System.out.println("Выбран " + selectedDrink);
         } else {
             System.out.println("Такого напитка нет");
         }

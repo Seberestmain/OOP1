@@ -17,9 +17,8 @@ public class HotDrinks {
 
     @Override
     public String toString() {
-        return "HotDrinks{" +
-                "name='" + name + '\'' +
-                ", volume=" + volume +
-                '}';
+        return "Горячие напитки " +
+                " Название= " + name + '\'' +
+                ",  Объём" + volume ;
     }
 }
